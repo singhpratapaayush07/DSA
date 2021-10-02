@@ -1,7 +1,7 @@
 # DSA
 Repository for participants in the Hacktoberfest 2021 who want to contribute and learn DSA.
 
-#Steps:
+# Steps:
 Fork this Repository using the button at the top
 Clone your forked repository to your pc
 Create a new branch for your modifications (ie. git branch new-user and check it out git checkout new-user and git checkout -b new-user)
