@@ -2,14 +2,14 @@
 Repository for participants in the Hacktoberfest 2021 who want to contribute and learn DSA.
 
 # Steps:
-Fork this Repository using the button at the top
-Clone your forked repository to your pc
-Create a new branch for your modifications (ie. git branch new-user and check it out git checkout new-user and git checkout -b new-user)
-Add new DSA realted files
-Add your files
-Create a pull request
-Star this repository
-Wait for Pull Request to merge
-Celebrate - you've done your first pull request!
+1. Fork this Repository using the button at the top
+2. Clone your forked repository to your pc
+3. Create a new branch for your modifications (ie. git branch new-user and check it out git checkout new-user and git checkout -b new-user)
+4. Add new DSA realted files
+5. Add your files
+6. Create a pull request
+7. Star this repository
+8. Wait for Pull Request to merge
+9. Celebrate - you've done your first pull request!
 
 Note: Spam not allowed! Only valid codes are add in repo.
