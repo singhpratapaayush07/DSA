@@ -1,0 +1,15 @@
+int Delete(struct Array *arr, int index)
+{
+    int x = 0, i; //deleted value in x
+    if (index >= 0 && index < arr->length) //valid index
+    {
+        x = arr->A[index]; //x is assigned to index value
+        for (i = index; i < arr->length - 1; i++) //shifting the elements
+        {
+            arr->A[i] = arr->A[i + 1]; //copy previous element
+        }
+        arr->length--; //length decrement because one value is deleted
+        return x; //return deleted element
+    }
+    return 0;
+}
