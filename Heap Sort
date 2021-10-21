@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void heapify(int ind,vector<int> &v,int last){ //heapify for maxheap(oushes element at ind at its appropriate location : O(logn)
+	int child1=2*ind,child2=2*ind+1;
+	if(child1<=last){
+		int maxInd;
+		if(child2<=last){
+			if(v[child1]>v[child2])
+				maxInd=child1;
+			else
+				maxInd=child2;
+		}
+		else{
+			maxInd=child1;
+		}
+		
+		if(v[ind]<v[maxInd]){
+			swap(v[ind],v[maxInd]);
+			ind=maxInd;
+			heapify(ind,v,last);
+		}
+		
+	}
+	else{ //this is a leaf node
+		return;
+	}
+}
+
+void heapSort(vector<int> &v){
+	int size=v.size();
+	
+	//creating heap: O(n);
+	for(int i=size-1-1;i>=1;i--){
+		heapify(i,v,size-1);
+	}
+	
+	//popping from heap: O(nlogn)
+	int n=size;
+	while(n>1){  //O(n)    //  efflen>1 because -1 is excluded
+		
+		swap(v[1],v[n-1]); //swapping with last element
+		n--;
+		heapify(1,v,n-1);  //log(n)
+	}
+}
+
+int main(){
+	int n=6;
+	vector<int> v(n+1);
+	v[0]=-1;
+	for(int i=1;i<=n;i++){  //Sample Input: 10 20 4 9 7 11
+		cin>>v[i];
+	}
+	
+
+	cout<<"\nSorted array: \n";
+	heapSort(v);
+	
+	for(int i=1;i<=n;i++){
+		cout<<v[i]<<" ";
+	}
+	
+	
+	return 0;
+}
